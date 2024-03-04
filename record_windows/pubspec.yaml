@@ -2,6 +2,7 @@ name: record_windows
 description: Windows specific implementation for record package called by record_platform_interface.
 version: 1.0.2
 homepage: https://github.com/llfbandit/record/tree/master/record_windows
+publish_to: none
 
 environment:
   sdk: ">=2.17.0 <4.0.0"
@@ -11,11 +12,16 @@ dependencies:
   flutter:
     sdk: flutter
 
-  record_platform_interface: ^1.0.2
+  record_platform_interface: # ^1.0.2
+    #path: ../record_platform_interface
+    git:
+      url: https://github.com/vuihoc-edtech/record
+      ref: master
+      path: record_platform_interface
   path: ^1.8.0
 
 dev_dependencies:
-  flutter_lints: ^2.0.3
+  flutter_lints: ^2.0.0
 
 flutter:
   plugin:
